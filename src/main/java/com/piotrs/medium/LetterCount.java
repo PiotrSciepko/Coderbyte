@@ -47,7 +47,5 @@ public class LetterCount {
         } else {
             System.out.println(-1);
         }
-
-
     }
 }
