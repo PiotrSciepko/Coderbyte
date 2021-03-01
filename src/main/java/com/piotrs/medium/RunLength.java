@@ -15,8 +15,7 @@ public class RunLength {
     public static void main(String[] args) {
 
         int i = 0;
-        StringBuilder sb = new StringBuilder();
-        sb.append(STR).append(' ');
+        StringBuilder sb = new StringBuilder(STR).append(' ');
         StringBuilder result = new StringBuilder();
         while (sb.charAt(i) != ' ') {
             int counter = 0;
