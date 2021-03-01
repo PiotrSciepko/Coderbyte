@@ -1,6 +1,6 @@
 package com.piotrs;
 
-public class SimpleCode {
+public class RunLength {
 
     private static final String STR = "wwwppoqq";
 
