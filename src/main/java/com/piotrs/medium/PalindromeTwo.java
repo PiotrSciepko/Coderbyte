@@ -20,7 +20,7 @@ public class PalindromeTwo {
             }
         }
         String firstHalf = sb.substring(0, sb.length() / 2).toLowerCase();
-        String secondHalf = sb.reverse().substring(0, sb.length() /2).toLowerCase();
+        String secondHalf = sb.reverse().substring(0, sb.length() / 2).toLowerCase();
 
         if (firstHalf.equals(secondHalf)) {
             System.out.println("true");
