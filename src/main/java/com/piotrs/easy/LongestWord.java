@@ -1,4 +1,5 @@
 package com.piotrs.easy;
+
 /*
 Difficulty: easy
 Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string.
@@ -29,10 +30,10 @@ public class LongestWord {
         String[] splitted = sb.toString().split(" ");
         int longest = 0;
         int longestIndex = 0;
-        for (int i = 0; i < splitted.length; i++) {
-            if (splitted[i].length() > longest) {
-                longest = splitted[i].length();
-                longestIndex = Arrays.asList(splitted).indexOf(splitted[i]);
+        for (String s : splitted) {
+            if (s.length() > longest) {
+                longest = s.length();
+                longestIndex = Arrays.asList(splitted).indexOf(s);
             }
         }
         System.out.println(splitted[longestIndex]);
