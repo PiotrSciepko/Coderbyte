@@ -22,9 +22,9 @@ public class FindIntersection {
 
     public static void main(String[] args) {
 
-        List<String> arr1 = Arrays.asList(strArr[0].replaceAll(" ", "").split(","));
-        List<String> arr2 = Arrays.asList(strArr[1].replaceAll(" ", "").split(","));
-        List<String> result = new ArrayList();
+        String[] arr1 = strArr[0].replace(" ", "").split(",");
+        List<String> arr2 = Arrays.asList(strArr[1].replace(" ", "").split(","));
+        List<String> result = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
         for (String number : arr1) {
             if (arr2.contains(number)) {
