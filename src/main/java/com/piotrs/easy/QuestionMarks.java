@@ -23,23 +23,21 @@ public class QuestionMarks {
         String qMarks = STR.replaceAll("([a-zA-Z ])", "").replaceAll("(\\?\\?\\?)", "#");
 
         String result = "false";
-        if (qMarks.contains("#")) {
-            int index = 0;
-            int number1;
-            int number2;
+        int index = 0;
+        int number1;
+        int number2;
 
-            while (index < qMarks.length() - 1) {
-                index = qMarks.indexOf("#", index);
-                if (index > 0 && index < qMarks.length()) {
-                    number1 = Character.getNumericValue(qMarks.charAt(index - 1));
-                    number2 = Character.getNumericValue(qMarks.charAt(index + 1));
-                    if (number1 + number2 == 10) {
-                        result = "true";
-                        break;
-                    }
+        while (index < qMarks.length() - 1) {
+            index = qMarks.indexOf("#", index);
+            if (index > 0 && index < qMarks.length()) {
+                number1 = Character.getNumericValue(qMarks.charAt(index - 1));
+                number2 = Character.getNumericValue(qMarks.charAt(index + 1));
+                if (number1 + number2 == 10) {
+                    result = "true";
+                    break;
                 }
-                index += 1;
             }
+            index += 1;
         }
         System.out.println(result);
     }
