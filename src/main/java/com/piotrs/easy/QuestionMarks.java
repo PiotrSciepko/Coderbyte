@@ -16,7 +16,7 @@ Output: true
 
 public class QuestionMarks {
 
-    private static final String STR = "acc?7??sss?3rr1??????5";
+    private static final String STR = "arrb6???4xxbl5???eee5";
 
     public static void main(String[] args) {
 
@@ -25,25 +25,20 @@ public class QuestionMarks {
         String result = "false";
         if (qMarks.contains("#")) {
             int index = 0;
-            int number1 = 0;
-            int number2 = 0;
-            int counter = 0;
+            int number1;
+            int number2;
 
-            while (counter < qMarks.length() - 1) {
-                index = qMarks.indexOf("#", counter);
-                if (index == -1) {
-                    break;
-                }
-                if ((index > 0) && (index < qMarks.length())) {
+            while (index < qMarks.length() - 1) {
+                index = qMarks.indexOf("#", index);
+                if (index > 0 && index < qMarks.length()) {
                     number1 = Character.getNumericValue(qMarks.charAt(index - 1));
                     number2 = Character.getNumericValue(qMarks.charAt(index + 1));
-                    counter = index + 1;
                     if (number1 + number2 == 10) {
                         result = "true";
                         break;
                     }
                 }
-                counter += 1;
+                index += 1;
             }
         }
         System.out.println(result);
