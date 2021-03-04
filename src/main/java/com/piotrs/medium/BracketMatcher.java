@@ -26,10 +26,6 @@ public class BracketMatcher {
                 break;
             }
         }
-        if (bracketCount == 0) {
-            System.out.println(1);
-        } else {
-            System.out.println(0);
-        }
+        System.out.println(bracketCount == 0 ? 1 : 0);
     }
 }
