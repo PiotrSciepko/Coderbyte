@@ -15,12 +15,12 @@ public class RunLength {
     public static void main(String[] args) {
 
         int i = 0;
-        StringBuilder sb = new StringBuilder(STR).append(' ');
+        String str = STR + ' ';
         StringBuilder result = new StringBuilder();
-        while (sb.charAt(i) != ' ') {
+        while (str.charAt(i) != ' ') {
             int counter = 0;
-            char controlChar = sb.charAt(i);
-            while (sb.charAt(i) == controlChar) {
+            char controlChar = str.charAt(i);
+            while (str.charAt(i) == controlChar) {
                 counter += 1;
                 i += 1;
             }
